@@ -1,5 +1,6 @@
 AI usage. I used AI to create all the comments for my code as well as fix the semaphore issue I had with my last code where it wasn't printung for every instance with the sensor task. I also asked it to make sure I was meeting all my requirements for the assignement with the code I had. 
 
+Wokwi Link: https://wokwi.com/projects/437503517091076097
 
 Scheduler Fit: How do your task priorities / RTOS settings guarantee every H task’s deadline in Wokwi? Cite one timestamp pair that proves it.
 The RTOS settings/ task priorities guarantees Hard Real-Time task deadlines through its priority-based preemptive scheduling. Critical tasks like medicalEventResponseTask with a priority of 6 and heartRateMonitorTask with a priority of 5 are assigned the highest priority. This is to esnure that when a vital event occurs such as the emergency button being pressed thatthese tasks immediately preempt any lower-priority tasks. Non-critical soft real-time task such as dataLoggingTask with a priority of 2 and systemHeartbeatTask with a priority of 1 execute only when the higher-priority tasks are blocked or idle to prevent them from delaying critical operations.
